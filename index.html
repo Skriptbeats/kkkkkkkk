@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uma Mensagem Para Você 💕</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Great+Vibes&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Áudio de fundo -->
+    <audio id="bgMusic" loop>
+        <source src="Fundo.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Tela de Contagem Regressiva -->
+    <div class="countdown-overlay" id="countdownOverlay">
+        <div class="countdown-container">
+            <div class="countdown-header">
+                <h1>💕 Algo Especial Está Chegando 💕</h1>
+                <p>Uma mensagem importante será revelada na sexta feira as 18:00. Em:</p>
+            </div>
+
+            <div class="countdown-timer" id="countdownTimer">
+                <div class="time-block">
+                    <div class="time-number" id="days">00</div>
+                    <div class="time-label">Dias</div>
+                </div>
+                <div class="time-block">
+                    <div class="time-number" id="hours">00</div>
+                    <div class="time-label">Horas</div>
+                </div>
+                <div class="time-block">
+                    <div class="time-number" id="minutes">00</div>
+                    <div class="time-label">Minutos</div>
+                </div>
+                <div class="time-block">
+                    <div class="time-number" id="seconds">00</div>
+                    <div class="time-label">Segundos</div>
+                </div>
+            </div>
+
+            <div class="countdown-message">
+                <p>⏰ Uma surpresa especial te aguarda...</p>
+                <p>💝 Prepare-se para algo inesquecível...</p>
+                <p>Pode escolher em ver sozinha ou comigo ao seu lado </p>
+                <p>(apenas durante, vou embora após voce ver)</p>
+            </div>
+            
+            <button class="skip-btn" onclick="showMainContent()">
+                💕 Ver Agora
+            </button>
+        </div>
+    </div>
+
+    <!-- Controle de Música -->
+    <button class="music-control" id="musicControl" onclick="toggleMusic()">
+        🎵
+    </button>
+
+    <!-- Corações flutuantes no fundo -->
+    <div class="floating-hearts" id="hearts"></div>
+
+    <!-- Partículas de brilho -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Conteúdo Principal -->
+    <div class="main-content" id="mainContent" style="display: none;">
+        
+        <!-- Seção Intro Emocional -->
+        <section class="intro-emotional" id="intro">
+            <div class="intro-content">
+                <div class="intro-heart">💕</div>
+                <h1 class="intro-title">Para Alguém Especial...</h1>
+                <p class="intro-text">
+                    Antes de tudo, eu preciso te contar algo importante.<br>
+                    Algo que carreguei no coração por muito tempo.<br><br>
+                    <strong>Esse site é só para você.</strong>
+                </p>
+                <button class="intro-btn" onclick="scrollToSection('begin')">
+                    💖 Quero Ler
+                </button>
+            </div>
+        </section>
+
+        <!-- Seção O Começo -->
+        <section class="begin-section" id="begin">
+            <div class="section-container">
+                <div class="begin-content">
+                    <div class="begin-text">
+                        <h2 class="section-title">🌟 O Começo de Tudo</h2>
+                        <p>
+                            Lembra quando a gente se conheceu? voce nao fazia muita questao de mim no local ate por que era a primeira vez que a gente realmente parava pra conversar, mas a partir desse dia tudo em nossas vidas mudou.
+                        </p>
+                        <p>
+                            Toda historia de amor é linda e única, mas a nossa... a nossa tem algo diferente de todas as outras, todas as vezes em que lembro do noso primeiro momento juntos, meu coracao acelera
+                        </p>
+                        <div class="quote-box">
+                            <p>"O amor não é encontrar alguém com quem você pode viver. 
+                            É encontrar alguém no qual você não consegue viver sem."</p>
+                        </div>
+                    </div>
+                    <div class="begin-photo">
+                        <div class="photo-frame">
+                            <img src="primeira foto.jpeg" alt="Nossa Primeira Foto Juntos" style="max-width: 100%; border-radius: 15px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Por Que Eu Te Amo -->
+        <section class="why-i-love" id="whyLove">
+            <div class="section-container">
+                <h2 class="section-title">💖 Por Que Eu Te Amo</h2>
+                <p class="section-subtitle">Porque cada dia que passa, eu te amo mais...</p>
+                
+                <div class="love-reasons">
+                    <div class="reason-card">
+                        <div class="reason-icon">😊</div>
+                        <h3>Seu Sorriso</h3>
+                        <p>O seu sorriso tem uma magica que sempre que eu vejo ele, o meu dia muda, a minha mente muda, tudo fica melhor.</p>
+                    </div>
+                    <div class="reason-card">
+                        <div class="reason-icon">💪</div>
+                        <h3>Sua Força</h3>
+                        <p>A forma como você lida com os desafios me impressiona e me ensina o quanto voce é diferente e dedicada.</p>
+                    </div>
+                    <div class="reason-card">
+                        <div class="reason-icon">💕</div>
+                        <h3>Seu Coração</h3>
+                        <p>Você tem o melhor coração de todos, sendo a pessoa mais incrivel e carinhosa que eu ja pude conhecer em toda minha vida.</p>
+                    </div>
+                    <div class="reason-card">
+                        <div class="reason-icon">🧠</div>
+                        <h3>Sua Mente</h3>
+                        <p>Sua maturidade para alguem da sua idade é simplesmente algo de se invejar, voce é surreal.</p>
+                    </div>
+                    <div class="reason-card">
+                        <div class="reason-icon">😍</div>
+                        <h3>Seus Olhos</h3>
+                        <p>Seus olhos são as coisas mais lindas que eu ja vi em toda minha vida, o jeito em que eles brilham quando eu te chamo de "minha princesa" ou "meu bem", é algo que ate hoje me faz chorar de emocao so de lembrar.</p>
+                    </div>
+                    <div class="reason-card">
+                        <div class="reason-icon">🎯</div>
+                        <h3>Sua Determinação</h3>
+                        <p>A forma que voce lida com seus objetivos me faz querer ser melhor.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Nossa Timeline -->
+        <section class="timeline-section" id="timeline">x
+            <div class="section-container">
+                <h2 class="section-title">💝 Nossa Linhagem do Tempo</h2>
+                <p class="section-subtitle">Cada momento com você foi especial...</p>
+                
+                <div class="timeline-full">
+                    <!-- Memória 1 -->
+                    <div class="timeline-item">
+                        <div class="timeline-date">📅 Primeiro Dia</div>
+                        <div class="timeline-content">
+                            <div class="timeline-photo">
+                                <div class="photo-placeholder">
+                                    <span>💕</span>
+                                    <p>Nossa Primeira Memória</p>
+                                </div>
+                            </div>
+                            <div class="timeline-text">
+                                <h3>✨ O Dia Que Tudo Mudou</h3>
+                                <p>Aquele nervosismo antes de te ver... e depois, quando nossos olhos se encontraram, 
+                                todo mundo sumiu. Só existia nós dois.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Memória 2 -->
+                    <div class="timeline-item reverse">
+                        <div class="timeline-date">🌙 Primeira Conversa</div>
+                        <div class="timeline-content">
+                            <div class="timeline-photo">
+                                <div class="photo-placeholder">
+                                    <span>💬</span>
+                                    <p>Nossa Primeira Conversa</p>
+                                </div>
+                            </div>
+                            <div class="timeline-text">
+                                <h3>💭 Conversas Até de Madrugada</h3>
+                                <p>Lembra daquelas conversas que duravam a noite inteira? 
+                                Cada palavra sua era um presente. Eu poderia ouvir você falar para sempre.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Memória 3 -->
+                    <div class="timeline-item">
+                        <div class="timeline-date">💑 Primeiro Date</div>
+                        <div class="timeline-content">
+                            <div class="timeline-photo">
+                                <div class="photo-placeholder">
+                                    <span>🌟</span>
+                                    <p>Nosso Primeiro Date</p>
+                                </div>
+                            </div>
+                            <div class="timeline-text">
+                                <h3>🍀 O Primeiro date</h3>
+                                <p>Eu estava tão nervoso... mas quando te vi, tudo ficou tao natural. 
+                                Aquele dia foi o primeiro dia do resto da minha vida.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Memória 4 -->
+                    <div class="timeline-item reverse">
+                        <div class="timeline-date">🤗 Primeiro Abraço</div>
+                        <div class="timeline-content">
+                            <div class="timeline-photo">
+                                <div class="photo-placeholder">
+                                    <span>💐</span>
+                                    <p>Nosso Primeiro Abraço</p>
+                                </div>
+                            </div>
+                            <div class="timeline-text">
+                                <h3>🤗 Aquele Abraço</h3>
+                                <p>Quando te abracei pela primeira vez, eu soube. Soube que era você. 
+                                Era como se meu coração finalmente tivesse chegado em casa.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Memória 5 -->
+                    <div class="timeline-item">
+                        <div class="timeline-date">💋 Primeiro Beijo</div>
+                        <div class="timeline-content">
+                            <div class="timeline-photo">
+                                <div class="photo-placeholder">
+                                    <span>💋</span>
+                                    <p>Nosso Primeiro Beijo</p>
+                                </div>
+                            </div>
+                            <div class="timeline-text">
+                                <h3>💕 O Primeiro Beijo</h3>
+                                <p>Aquele momento mágico... o tempo parou. Foi mais do que um beijo, 
+                                foi a certeza de que eu estava apaixonado por você.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Memória 6 -->
+                    <div class="timeline-item reverse">
+                        <div class="timeline-date">🎉 Primeiro "Eu Te Amo"</div>
+                        <div class="timeline-content">
+                            <div class="timeline-photo">
+                                <div class="photo-placeholder">
+                                    <span>💖</span>
+                                    <p>Nosso Primeiro "Eu Te Amo"</p>
+                                </div>
+                            </div>
+                            <div class="timeline-text">
+                                <h3>💝 As Três Palavras</h3>
+                                <p>"Eu te amo". Tão simples, mas tão profundo. Ditas com o coração 
+                                inteiro. E você respondeu com o sorriso mais lindo do mundo.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Memória 7 -->
+                    <div class="timeline-item">
+                        <div class="timeline-date">🌺 Moments Together</div>
+                        <div class="timeline-content">
+                            <div class="timeline-photo">
+                                <div class="photo-placeholder">
+                                    <span>🌻</span>
+                                    <p>Nossos Momentos</p>
+                                </div>
+                            </div>
+                            <div class="timeline-text">
+                                <h3>🌻 Os Melhores Momentos</h3>
+                                <p>As risadas, as brigas bobas, os passeios, as refeições juntos, 
+                                os momentos de silêncio confortável... Cada segundo ao seu lado era perfeito.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Memória 8 -->
+                    <div class="timeline-item reverse">
+                        <div class="timeline-date">💔 O Adeus</div>
+                        <div class="timeline-content">
+                            <div class="timeline-photo">
+                                <div class="photo-placeholder">
+                                    <span>😢</span>
+                                    <p>O Momento Difícil</p>
+                                </div>
+                            </div>
+                            <div class="timeline-text">
+                                <h3>💔 O Que Deixou de Ser</h3>
+                                <p>Quando nos separamos, uma parte de mim foi junto. 
+                                Mas eu nunca parei de te amar. Nem por um segundo.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção O Que Eu Aprendi -->
+        <section class="learned-section" id="learned">
+            <div class="section-container">
+                <h2 class="section-title">📚 O Que Eu Aprendi Com Você</h2>
+                <p class="section-subtitle">Você foi minha maior professora...</p>
+                
+                <div class="learned-grid">
+                    <div class="learned-item">
+                        <div class="learned-icon">💫</div>
+                        <h3>O Amor Verdadeiro</h3>
+                        <p>Você me ensinou que amar é muito mais do que sentir coisas. 
+                        É escolher essa pessoa todos os dias, mesmo quando é difícil.</p>
+                    </div>
+                    <div class="learned-item">
+                        <div class="learned-icon">🤝</div>
+                        <h3>A Importância de Perdoar</h3>
+                        <p>Você me mostrou que pedir desculpas não é sinal de fraqueza, 
+                        mas sim de força e maturidade.</p>
+                    </div>
+                    <div class="learned-item">
+                        <div class="learned-icon">🎯</div>
+                        <h3>A Persistência</h3>
+                        <p>Você me ensinou a nunca desistir. Que as melhores coisas da vida 
+                        exigem esforço e dedicação.</p>
+                    </div>
+                    <div class="learned-item">
+                        <div class="learned-icon">😊</div>
+                        <h3>A Felicidade</h3>
+                        <p>Você me ensinou que a verdadeira felicidade está nas pequenas coisas. 
+                        Em um sorriso, em um abraço, em estar junto.</p>
+                    </div>
+                    <div class="learned-item">
+                        <div class="learned-icon">💪</div>
+                        <h3>A Coragem</h3>
+                        <p>Você me deu coragem para ser quem eu realmente sou. 
+                        Para mostrar meu lado vulnerável sem medo.</p>
+                    </div>
+                    <div class="learned-item">
+                        <div class="learned-icon">🌟</div>
+                        <h3>A Sonhar</h3>
+                        <p>Você me fez acreditar em finais felizes. 
+                        Em nós.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Qualidades Dela -->
+        <section class="qualities-section" id="qualities">
+            <div class="section-container">
+                <h2 class="section-title">🌟 Coisas Que Me Fazem Te Amar</h2>
+                <p class="section-subtitle">Porque você é única e perfeita...</p>
+                
+                <div class="qualities-carousel">
+                    <div class="quality-slide">
+                        <div class="quality-icon">💖</div>
+                        <h3>Sua Bondade</h3>
+                        <p>A forma como você trata as pessoas, sempre com carinho e respeito.</p>
+                    </div>
+                    <div class="quality-slide">
+                        <div class="quality-icon">🧡</div>
+                        <h3>Sua Inteligência</h3>
+                        <p>Você é inteligente de uma forma que me encanta. Suas ideias, seus pensamentos.</p>
+                    </div>
+                    <div class="quality-slide">
+                        <div class="quality-icon">💛</div>
+                        <h3>Sua Honestidade</h3>
+                        <p>Sua sinceridade é maravilhosa. Você é real, verdadeira, unica.</p>
+                    </div>
+                    <div class="quality-slide">
+                        <div class="quality-icon">💚</div>
+                        <h3>Sua Carinha</h3>
+                        <p>Você é a pessoa mais linda e incrivel que eu já vi. Seu rosto, seus olhos, seu sorriso...</p>
+                    </div>
+                    <div class="quality-slide">
+                        <div class="quality-icon">💙</div>
+                        <h3>Seu Corpo</h3>
+                        <p>Cada detalhe seu me deixa louco, sua cintura, seu cabelo, seu cheiro. Você é perfeita.</p>
+                    </div>
+                    <div class="quality-slide">
+                        <div class="quality-icon">💜</div>
+                        <h3>Sua Personalidade</h3>
+                        <p>Sua personalidade é única. engraçada, inteligente, forte...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Nostalgia -->
+        <section class="nostalgia-section" id="nostalgia">
+            <div class="section-container">
+                <h2 class="section-title">🎬 Lembra Disso?</h2>
+                <p class="section-subtitle">Momentos que marcaram nosso coração...</p>
+                
+                <div class="nostalgia-grid">
+                    <div class="nostalgia-item">
+                        <div class="nostalgia-emoji">🍾</div>
+                        <h3>nossa adega de sabado</h3>
+                        <p>quando voce demorava 2 horas pra se arrumar so pra ir na adega tomar um gin de 10... cada dia que isso acontecia pra mim era maravilhoso assim como o primeiro.</p>
+                    </div>
+                    <div class="nostalgia-item">
+                        <div class="nostalgia-emoji">🍽️</div>
+                        <h3>Jantares juntos</h3>
+                        <p>nossos jantares juntos... mesmo quando eu fazia algo elaborado como um risoto ou saiamos para comer algo simples como um mcdonalds, ambos eram extremamente especiais para mim.</p>
+                    </div>
+                    <div class="nostalgia-item">
+                        <div class="nostalgia-emoji">🌙</div>
+                        <h3>Passeios Noturnos</h3>
+                        <p>algumas das vezes em que saiamos sem rumo so pra "dar uma volta de golzinho" pela cidade kkkkk... tudo isso pra mim era magico e me mostrava o quanto que voce me amava de verdade.</p>
+                    </div>
+                    <div class="nostalgia-item">
+                        <div class="nostalgia-emoji">🎬</div>
+                        <h3>Maratonar Séries</h3>
+                        <p>quando passavamos o fim de semana inteiro assistindo alguma serie ate 6 da manha sem perceber a hora passar.</p>
+                    </div>
+                    <div class="nostalgia-item">
+                        <div class="nostalgia-emoji">🚗</div>
+                        <h3>Viagens</h3>
+                        <p>quando viajavamos para algum lugar e voce ia o caminho dormindo em meu braco, isso pra mim era a mesma coisa que ganhar qualquer dinheiro do mundo, e pode ter certeza que nao tem dinheiro que compre tudo que vivemos juntos.</p>
+                    </div>
+                    <div class="nostalgia-item">
+                        <div class="nostalgia-emoji">💭</div>
+                        <h3>As Mensagens de Bom Dia</h3>
+                        <p>Acordar e ver sua mensagem, nao tinha forma melhor de comecar o dia, eu me sentia amado e desejado ja desde o comeco.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Playlist -->
+        <section class="playlist-section" id="playlist">
+            <div class="section-container">
+                <h2 class="section-title">🎵 Nossa Playlist</h2>
+                <p class="section-subtitle">Músicas que nos lembram um ao outro...</p>
+                
+                <div class="playlist-grid">
+                    <div class="song-card">
+                        <div class="song-icon">🎶</div>
+                        <h3>musica 1</h3>
+                        <p>A música que tocava quando voce estava triste</p>
+                        <audio id="audio1">
+                            <source src="musica1.mp3" type="audio/mpeg">
+                        </audio>
+                        <button class="play-btn" onclick="toggleSong('audio1', this)">▶️ Tocar</button>
+                    </div>
+                    <div class="song-card">
+                        <div class="song-icon">🎵</div>
+                        <h3>musica 2</h3>
+                        <p>Nossa música favorita</p>
+                        <audio id="audio2">
+                            <source src="musica2.mp3" type="audio/mpeg">
+                        </audio>
+                        <button class="play-btn" onclick="toggleSong('audio2', this)">▶️ Tocar</button>
+                    </div>
+                    <div class="song-card">
+                        <div class="song-icon">🎼</div>
+                        <h3> musica 3</h3>
+                        <p>A que você cantava pra mim</p>
+                        <audio id="audio3">
+                            <source src="musica3.mp3" type="audio/mpeg">
+                        </audio>
+                        <button class="play-btn" onclick="toggleSong('audio3', this)">▶️ Tocar</button>
+                    </div>
+                    <div class="song-card">
+                        <div class="song-icon">🎤</div>
+                        <h3>musica 4</h3>
+                        <p>A de quando nos conhecemos</p>
+                        <audio id="audio4">
+                            <source src="musica4.mp3" type="audio/mpeg">
+                        </audio>
+                        <button class="play-btn" onclick="toggleSong('audio4', this)">▶️ Tocar</button>
+                    </div>
+                </div>
+        </section>
+
+        <!-- Seção Metas -->
+        <section class="goals-section" id="goals">
+            <div class="section-container">
+                <h2 class="section-title">🎯 Nossas Metas</h2>
+                <p class="section-subtitle">Coisas que ainda queremos fazer juntos...</p>
+                
+                <div class="goals-list">
+                    <div class="goal-item completed">
+                        <span class="goal-icon">✅</span>
+                        <div class="goal-content">
+                            <h3>Viajar para algum lugar especial</h3>
+                            <p>Explorar novos lugares juntos, criar memórias.</p>
+                        </div>
+                    </div>
+                    <div class="goal-item">
+                        <span class="goal-icon">⭕</span>
+                        <div class="goal-content">
+                            <h3>Morar juntos</h3>
+                            <p>Construir uma vida, acordar juntos todos os dias e nao ter que se preocupar em se despedir aos domingos</p>
+                        </div>
+                    </div>
+                    <div class="goal-item">
+                        <span class="goal-icon">⭕</span>
+                        <div class="goal-content">
+                            <h3>Criar um pet juntos</h3>
+                            <p>um doguinho so pra completar</p>
+                        </div>
+                    </div>
+                    <div class="goal-item">
+                        <span class="goal-icon">⭕</span>
+                        <div class="goal-content">
+                            <h3>Assistir todos os filmes juntos</h3>
+                            <p>Noites de cinema, pipoca e cobertor</p>
+                        </div>
+                    </div>
+                    <div class="goal-item">
+                        <span class="goal-icon">⭕</span>
+                        <div class="goal-content">
+                            <h3> envelhecer juntos</h3>
+                            <p>Cabelos brancos, netos, e muitas histórias para contar</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Carta Principal -->
+        <section class="letter-section" id="letter">
+            <div class="section-container">
+                <h2 class="section-title">💌 Uma Carta Para Você</h2>
+                
+                <div class="letter-whole">
+                    <div class="envelope-flap"></div>
+                    <div class="letter-content">
+                        <p class="letter-dear"> Meu amor,</p>
+                        
+                        <p>Eu poderia escrever mil cartas, e ainda assim não conseguiria expressar 
+                        tudo o que sinto por você. Mas vou tentar...</p>
+                        
+                        <p>Você apareceu na minha vida quando eu menos esperava. 
+                        E de repente, tudo fazia sentido. As peças do quebra-cabeça se encaixaram.</p>
+                        
+                        <p>Lembro de cada momento. Cada risada, cada abraço, cada beijo, 
+                        cada "eu te amo" sussurrado. Cada segundo ao seu lado foi um presente.</p>
+                        
+                        <p>Eu sei que não foi fácil. Eu sei que eu errei. 
+                        Eu sei que às vezes eu não te dei o tanto que você merecia.</p>
+                        
+                        <p>Mas eu quero uma segunda chance. Não para cometer os mesmos erros, 
+                        mas para consertá-los. Para te mostrar que aprendi. 
+                        Para te mostrar que você é a pessoa que eu quero.</p>
+                        
+                        <p>Quero acordar ao seu lado todos os dias. Quero fazer você sorrir. 
+                        Quero ser a razao da sua felicidade. Quero construir algo real, 
+                        algo forte, algo que dure para sempre.</p>
+                        
+                        <p>Você é minha pessoa. Minha pessoa favorita no mundo inteiro.</p>
+                        
+                        <p class="letter-sign">Com todo o meu amor, para sempre...</p>
+                        <p class="letter-name">Seu namorado Lucas 💕</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Promessas -->
+        <section class="promises-section" id="promises">
+            <div class="section-container">
+                <h2 class="section-title">💝 Minhas Promessas</h2>
+                <p class="section-subtitle">Se você me der essa chance, eu prometo:</p>
+                
+                <div class="promises-grid">
+                    <div class="promise-card">
+                        <div class="promise-icon">💖</div>
+                        <h3>Te Amar</h3>
+                        <p>Todos os dias, sem exceção. Mesmo nos dias difíceis.</p>
+                    </div>
+                    <div class="promise-card">
+                        <div class="promise-icon">👂</div>
+                        <h3>Ouvir</h3>
+                        <p>Ouvir você de verdade. Sem interromper, sem julgar.</p>
+                    </div>
+                    <div class="promise-card">
+                        <div class="promise-icon">💬</div>
+                        <h3>Comunicar</h3>
+                        <p>Falar sobre tudo. nunca mais guardar coisas para mim.</p>
+                    </div>
+                    <div class="promise-card">
+                        <div class="promise-icon">🤝</div>
+                        <h3>Respeitar</h3>
+                        <p>Sua opinião, seus sonhos, seus limites. Sempre.</p>
+                    </div>
+                    <div class="promise-card">
+                        <div class="promise-icon">🌹</div>
+                        <h3>Cuidar</h3>
+                        <p>De você, de nós, do nosso amor. Como um tesouro.</p>
+                    </div>
+                    <div class="promise-card">
+                        <div class="promise-icon">💎</div>
+                        <h3>Lutar</h3>
+                        <p>Por nós. Sempre. Até o fim.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Pedido Final -->
+        <section class="proposal-section" id="proposal">
+            <div class="section-container">
+                <div class="proposal-content">
+                    <div class="proposal-heart">💕</div>
+                    <h2 class="proposal-title">Você Me Daria Uma Segunda Chance?</h2>
+                    <p class="proposal-text">
+                        Eu sei que eu machuquei você. Eu sei que confiança se quebra.<br>
+                        Mas eu também sei que nosso amor é forte o suficiente para superar isso.<br><br>
+                        Me dê a chance de provar que eu mudei.<br>
+                        Me dê a chance de te fazer feliz.<br>
+                        Me dê a chance de construir nosso para sempre.
+                    </p>
+                    
+                    <div class="proposal-buttons">
+                        <button class="btn-yes" onclick="showYesResponse()">
+                            <span class="btn-icon">💝</span>
+                            <span class="btn-text">SIM, EU QUERO!</span>
+                        </button>
+                        <button class="btn-maybe" onclick="showMaybeResponse()">
+                            <span class="btn-icon">🤔</span>
+                            <span class="btn-text">Deixa eu pensar...</span>
+                        </button>
+                    </div>
+                    
+                    <div class="response" id="yesResponse" style="display: none;">
+                        <div class="celebration-container">
+                            <div class="celebration-hearts">💕💕💕</div>
+                            <h3 class="celebration-title">OBRIGADO!</h3>
+                            <p class="celebration-text">Você não vai se arrepender!</p>
+                            <p class="love-text">Eu te amo muito mais do que palavras podem demonstrar, meu amor!
+                            <p class="love-text">me manda print da sua escolha
+                            </p>
+                            <div class="hearts-celebration">💖💖💖💖💖</div>
+                        </div>
+                    </div>
+                    
+                    <div class="response" id="maybeResponse" style="display: none;">
+                        <div class="maybe-content">
+                            <div class="maybe-emoji">💭</div>
+                            <h3>Tá bom, pode pensar...</h3>
+                            <p>Mas saiba que eu vou esperar!</p>
+                            <p>E enquanto você pensa, saiba que eu não vou parar de te amar!
+                            <p class="love-text">me manda print da sua escolha
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Memórias Finais -->
+        <section class="final-memories" id="finalMemories">
+            <div class="section-container">
+                <h2 class="section-title">📸 Nossas Fotos</h2>
+                <p class="section-subtitle">Momentos capturados para voce lembrar...</p>
+                
+                <div class="photo-gallery">
+                    <div class="gallery-item">
+                        <img src="foto1.jpg" alt="Foto 1" style="width: 100%; border-radius: 15px;">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="foto2.jpg" alt="Foto 2" style="width: 100%; border-radius: 15px;">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="foto3.jpg" alt="Foto 3" style="width: 100%; border-radius: 15px;">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="foto4.jpg" alt="Foto 4" style="width: 100%; border-radius: 15px;">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="foto5.jpg" alt="Foto 5" style="width: 100%; border-radius: 15px;">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="foto6.jpg" alt="Foto 6" style="width: 100%; border-radius: 15px;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Agradecimento -->
+        <section class="gratitude-section" id="gratitude">
+            <div class="section-container">
+                <div class="gratitude-content">
+                    <h2>🙏 Obrigado</h2>
+                    <p>Obrigado por cada momento. Bom ou ruim.</p>
+                    <p>Obrigado por me ensinar o que é amor.</p>
+                    <p>Obrigado por existir.</p>
+                    <div class="gratitude-heart">💕</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rodapé -->
+        <footer>
+            <div class="footer-content">
+                <p class="footer-message">Feito com todo o meu amor 💕</p>
+                <p class="footer-date">Criado especialmente para você</p>
+                <p class="footer-year">2026 - 2026</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
